@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditya Vikram Singh | Forward Deployed Engineer | AI Solutions Architect</title>
+  <meta name="description" content="Forward Deployed Engineer specializing in Enterprise AI, Voice AI, Customer Engineering, Solution Architecture, Enterprise Integrations, Conversational AI, APIs and Generative AI.">
+  <meta property="og:title" content="Aditya Vikram Singh | Forward Deployed Engineer">
+  <meta property="og:description" content="Enterprise AI, Voice AI, Solution Architecture, Customer Engineering">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+  :root {
+    --bg-primary: #0a0a0f; --bg-secondary: #111118; --bg-tertiary: #1a1a24;
+    --bg-glass: rgba(255,255,255,0.03); --border-subtle: rgba(255,255,255,0.06);
+    --border-glow: rgba(255,255,255,0.1); --text-primary: #f5f5f7;
+    --text-secondary: #a1a1aa; --text-muted: #52525b;
+    --accent-blue: #60a5fa; --accent-green: #34d399; --accent-amber: #fbbf24;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg-primary); }
+  ::-webkit-scrollbar-thumb { background: var(--border-glow); border-radius: 3px; }
+  .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(10,10,15,0.8); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border-bottom: 1px solid var(--border-subtle); transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
+  .nav.scrolled { padding: 0.75rem 2rem; background: rgba(10,10,15,0.95); }
+  .nav-logo { font-weight: 700; font-size: 0.95rem; letter-spacing: -0.02em; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.01em; transition: color 0.3s ease; position: relative; }
+  .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--text-primary); transition: width 0.3s ease; }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta { padding: 0.5rem 1.25rem; border: 1px solid var(--border-glow); border-radius: 6px; color: var(--text-primary); font-size: 0.8rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease; background: var(--bg-glass); }
+  .nav-cta:hover { border-color: var(--text-secondary); background: rgba(255,255,255,0.06); }
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 8rem 2rem 4rem; position: relative; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120,120,140,0.08), transparent), radial-gradient(ellipse 60% 40% at 80% 80%, rgba(100,100,120,0.05), transparent); }
+  .hero-grid { position: absolute; inset: 0; pointer-events: none; opacity: 0.15; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 60px 60px; }
+  .hero-content { position: relative; z-index: 2; max-width: 900px; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1rem; border-radius: 100px; border: 1px solid var(--border-subtle); background: var(--bg-glass); font-size: 0.75rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 2rem; letter-spacing: 0.02em; animation: fadeInUp 0.8s ease 0.2s both; }
+  .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 8px #22c55e; animation: pulse 2s ease infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
+  .hero-name { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; margin-bottom: 1rem; background: linear-gradient(180deg, #fff 0%, #a1a1aa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: fadeInUp 0.8s ease 0.4s both; }
+  .hero-title { font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 500; color: var(--text-secondary); letter-spacing: -0.01em; margin-bottom: 0.5rem; animation: fadeInUp 0.8s ease 0.6s both; }
+  .hero-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin: 1.5rem 0 2.5rem; animation: fadeInUp 0.8s ease 0.8s both; }
+  .hero-tag { padding: 0.35rem 0.9rem; border-radius: 6px; border: 1px solid var(--border-subtle); background: var(--bg-glass); font-size: 0.75rem; font-weight: 500; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace; letter-spacing: -0.01em; transition: all 0.3s ease; }
+  .hero-tag:hover { border-color: var(--border-glow); color: var(--text-primary); transform: translateY(-2px); }
+  .hero-cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeInUp 0.8s ease 1s both; }
+  .btn-primary { padding: 0.85rem 2rem; border-radius: 8px; background: var(--text-primary); color: var(--bg-primary); font-size: 0.85rem; font-weight: 600; text-decoration: none; border: none; cursor: pointer; transition: all 0.3s ease; letter-spacing: -0.01em; display: inline-flex; align-items: center; gap: 0.5rem; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,255,255,0.15); }
+  .btn-secondary { padding: 0.85rem 2rem; border-radius: 8px; border: 1px solid var(--border-glow); background: transparent; color: var(--text-primary); font-size: 0.85rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem; }
+  .btn-secondary:hover { background: var(--bg-glass); border-color: var(--text-secondary); }
+  .hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: var(--text-muted); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; animation: fadeIn 1s ease 1.5s both; }
+  .hero-scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--border-glow), transparent); animation: scrollBounce 2s ease infinite; }
+  @keyframes scrollBounce { 0%,100%{transform:scaleY(1)} 50%{transform:scaleY(0.6)} }
+  @keyframes fadeInUp { from { opacity:0; transform:translateY(30px) } to { opacity:1; transform:translateY(0) } }
+  @keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
+  .section { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; position: relative; }
+  .section-header { margin-bottom: 3rem; max-width: 600px; }
+  .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.75rem; }
+  .section-title { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 1rem; }
+  .section-desc { color: var(--text-secondary); font-size: 1rem; line-height: 1.7; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+  .about-text { font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); }
+  .about-text p { margin-bottom: 1.25rem; }
+  .about-text strong { color: var(--text-primary); font-weight: 600; }
+  .about-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .pillar { padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-subtle); background: var(--bg-secondary); transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
+  .pillar:hover { border-color: var(--border-glow); transform: translateY(-4px); background: var(--bg-tertiary); }
+  .pillar-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--bg-glass); border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; color: var(--text-primary); font-size: 1.1rem; }
+  .pillar-title { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .pillar-desc { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; }
+  .timeline { position: relative; padding-left: 2rem; }
+  .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, var(--border-glow), var(--border-subtle), transparent); }
+  .timeline-item { position: relative; padding-bottom: 3rem; padding-left: 2rem; opacity: 0; transform: translateX(-20px); transition: all 0.6s cubic-bezier(0.4,0,0.2,1); }
+  .timeline-item.visible { opacity: 1; transform: translateX(0); }
+  .timeline-item::before { content: ''; position: absolute; left: -2rem; top: 0.4rem; width: 9px; height: 9px; border-radius: 50%; background: var(--bg-primary); border: 2px solid var(--text-muted); transform: translateX(-4px); transition: all 0.3s ease; }
+  .timeline-item:hover::before { border-color: var(--text-primary); background: var(--text-primary); box-shadow: 0 0 12px rgba(255,255,255,0.2); }
+  .timeline-date { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 0.25rem; letter-spacing: 0.05em; }
+  .timeline-role { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; }
+  .timeline-company { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem; }
+  .timeline-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
+  .timeline-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
+  .timeline-tag { padding: 0.2rem 0.6rem; border-radius: 4px; background: var(--bg-glass); border: 1px solid var(--border-subtle); font-size: 0.7rem; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace; }
+  .customers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+  .customer-card { padding: 1.75rem; border-radius: 14px; border: 1px solid var(--border-subtle); background: var(--bg-secondary); transition: all 0.4s cubic-bezier(0.4,0,0.2,1); cursor: default; position: relative; overflow: hidden; }
+  .customer-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); }
+  .customer-card:hover { border-color: var(--border-glow); transform: translateY(-6px); background: var(--bg-tertiary); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+  .customer-logo { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: var(--text-primary); }
+  .customer-domain { font-size: 0.75rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .customer-challenge { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem; }
+  .customer-outcome { padding: 0.75rem; border-radius: 8px; background: var(--bg-glass); border: 1px solid var(--border-subtle); font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; }
+  .customer-outcome strong { color: var(--text-primary); }
+  .customer-disclaimer { margin-top: 1rem; font-size: 0.7rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem; }
+  .voice-hero { padding: 4rem 2rem; text-align: center; max-width: 800px; margin: 0 auto; }
+  .voice-diagram { display: flex; align-items: center; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin: 2rem 0; padding: 2rem; border-radius: 16px; border: 1px solid var(--border-subtle); background: var(--bg-secondary); }
+  .diagram-node { padding: 0.75rem 1.25rem; border-radius: 8px; border: 1px solid var(--border-glow); background: var(--bg-glass); font-size: 0.8rem; font-weight: 600; color: var(--text-primary); font-family: 'JetBrains Mono', monospace; white-space: nowrap; transition: all 0.3s ease; }
+  .diagram-node:hover { border-color: var(--text-secondary); transform: scale(1.05); }
+  .diagram-arrow { color: var(--text-muted); font-size: 1.2rem; }
+  .voice-capabilities { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; max-width: 1000px; margin: 0 auto; }
+  .capability { padding: 1.25rem; border-radius: 10px; border: 1px solid var(--border-subtle); background: var(--bg-secondary); transition: all 0.3s ease; }
+  .capability:hover { border-color: var(--border-glow); background: var(--bg-tertiary); }
+  .capability-term { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.3rem; }
+  .capability-desc { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; }
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; }
+  .project-card { padding: 2rem; border-radius: 16px; border: 1px solid var(--border-subtle); background: var(--bg-secondary); transition: all 0.4s cubic-bezier(0.4,0,0.2,1); position: relative; overflow: hidden; }
+  .project-card::after { content: ''; position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(255,255,255,0.03), transparent 70%); pointer-events: none; }
+  .project-card:hover { border-color: var(--border-glow); transform: translateY(-6px); background: var(--bg-tertiary); box-shadow: 0 25px 80px rgba(0,0,0,0.4); }
+  .project-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+  .project-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--bg-glass); border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+  .project-title { font-size: 1.1rem; font-weight: 700; }
+  .project-tech { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+  .tech-badge { padding: 0.25rem 0.6rem; border-radius: 4px; background: var(--bg-glass); border: 1px solid var(--border-subtle); font-size: 0.7rem; font-family: 'JetBrains Mono', monospace; color: var(--text-secondary); font-weight: 500; }
+  .project-body { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
+  .project-body strong { color: var(--text-primary); }
+  .project-section { margin-bottom: 1rem; }
+  .project-section-label { font-size: 0.7rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.3rem; }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .skill-category { padding: 1.5rem; border-radius: 14px; border: 1px solid var(--border-subtle); background: var(--bg-secondary); }
+  .skill-cat-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; }
+  .skill-cat-icon { font-size: 1.1rem; }
+  .skill-cat-title { font-size: 0.95rem; font-weight: 700; }
+  .skill-items { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .skill-item { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid var(--border-subtle); background: var(--bg-glass); font-size: 0.8rem; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace; transition: all 0.2s ease; cursor: default; }
+  .skill-item:hover { border-color: var(--border-glow); color: var(--text-primary); background: rgba(255,255,255,0.04); }
+  .awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+  .award-card { padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-subtle); background: var(--bg-secondary); display: flex; align-items: flex-start; gap: 1rem; transition: all 0.3s ease; }
+  .award-card:hover { border-color: var(--border-glow); transform: translateY(-3px); }
+  .award-medal { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02)); border: 1px solid var(--border-glow); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+  .award-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.2rem; }
+  .award-meta { font-size: 0.8rem; color: var(--text-secondary); }
+  .award-count { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; }
+  .contact-section { text-align: center; padding: 6rem 2rem; }
+  .contact-title { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; margin-bottom: 1rem; }
+  .contact-desc { color: var(--text-secondary); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+  .contact-link { padding: 0.85rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-glow); background: var(--bg-secondary); color: var(--text-primary); text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem; }
+  .contact-link:hover { border-color: var(--text-secondary); background: var(--bg-tertiary); transform: translateY(-2px); }
+  .footer { padding: 2rem; text-align: center; border-top: 1px solid var(--border-subtle); color: var(--text-muted); font-size: 0.8rem; }
+  .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.4,0,0.2,1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* PHASE 2: ARCHITECTURE */
+  .arch-section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+  .arch-canvas { width: 100%; max-width: 900px; margin: 2rem auto; background: var(--bg-secondary); border-radius: 16px; border: 1px solid var(--border-subtle); padding: 2rem; position: relative; overflow: hidden; }
+  .arch-canvas::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); }
+  .arch-title { text-align: center; font-size: 0.75rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .arch-svg { width: 100%; height: auto; }
+  .arch-node { cursor: pointer; }
+  .arch-node:hover rect, .arch-node:hover circle { stroke: var(--text-primary); stroke-width: 2; }
+  .arch-node:hover text { fill: var(--text-primary); }
+  .arch-tooltip { position: absolute; background: var(--bg-tertiary); border: 1px solid var(--border-glow); border-radius: 8px; padding: 0.75rem 1rem; font-size: 0.8rem; color: var(--text-secondary); pointer-events: none; opacity: 0; transition: opacity 0.2s ease; z-index: 100; max-width: 220px; line-height: 1.5; }
+  .arch-tooltip.visible { opacity: 1; }
+  .arch-legend { display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem; flex-wrap: wrap; }
+  .arch-legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; color: var(--text-secondary); }
+  .arch-legend-dot { width: 10px; height: 10px; border-radius: 2px; }
+  .seq-step { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.5rem; border-radius: 10px; border: 1px solid var(--border-subtle); background: var(--bg-secondary); margin-bottom: 0.75rem; transition: all 0.3s ease; cursor: default; }
+  .seq-step:hover { border-color: var(--border-glow); background: var(--bg-tertiary); transform: translateX(8px); }
+  .seq-num { width: 32px; height: 32px; border-radius: 50%; background: var(--bg-glass); border: 1px solid var(--border-glow); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 600; color: var(--text-primary); flex-shrink: 0; }
+  .seq-content { flex: 1; }
+  .seq-title { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.15rem; }
+  .seq-desc { font-size: 0.8rem; color: var(--text-secondary); }
+  .seq-arrow { color: var(--text-muted); font-size: 1rem; text-align: center; margin: 0.25rem 0; }
+
+  /* PHASE 3: CASE STUDY */
+  .case-study { max-width: 900px; margin: 0 auto; }
+  .case-header { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; padding: 1.5rem; border-radius: 12px; background: var(--bg-secondary); border: 1px solid var(--border-subtle); }
+  .case-logo { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.04em; }
+  .case-meta { flex: 1; }
+  .case-client { font-size: 1.1rem; font-weight: 700; }
+  .case-via { font-size: 0.8rem; color: var(--text-muted); font-style: italic; }
+  .case-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+  .metric-card { padding: 1.25rem; border-radius: 10px; background: var(--bg-secondary); border: 1px solid var(--border-subtle); text-align: center; transition: all 0.3s ease; }
+  .metric-card:hover { border-color: var(--border-glow); transform: translateY(-3px); }
+  .metric-value { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em; }
+  .metric-label { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.3rem; }
+  .case-section { margin-bottom: 2rem; }
+  .case-section-title { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.75rem; }
+  .case-section-body { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; }
+  .case-section-body strong { color: var(--text-primary); }
+  .case-lessons { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .lesson-card { padding: 1.25rem; border-radius: 10px; background: var(--bg-secondary); border: 1px solid var(--border-subtle); }
+  .lesson-title { font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .lesson-body { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6; }
+
+  /* PHASE 4: METHODOLOGY */
+  .method-timeline { display: flex; flex-direction: column; gap: 0; max-width: 700px; margin: 0 auto; }
+  .method-step { display: flex; align-items: flex-start; gap: 1.5rem; padding: 1.25rem 0; position: relative; }
+  .method-step::before { content: ''; position: absolute; left: 19px; top: 48px; bottom: -8px; width: 2px; background: linear-gradient(to bottom, var(--border-glow), var(--border-subtle)); }
+  .method-step:last-child::before { display: none; }
+  .method-num { width: 40px; height: 40px; border-radius: 50%; background: var(--bg-secondary); border: 2px solid var(--border-glow); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 700; color: var(--text-primary); flex-shrink: 0; z-index: 2; transition: all 0.3s ease; }
+  .method-step:hover .method-num { border-color: var(--text-primary); background: var(--text-primary); color: var(--bg-primary); }
+  .method-content { flex: 1; padding-top: 0.4rem; }
+  .method-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
+  .method-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+
+  /* PHASE 4: SOLUTION ARCH */
+  .sol-arch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .sol-arch-card { padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-subtle); background: var(--bg-secondary); transition: all 0.4s cubic-bezier(0.4,0,0.2,1); cursor: pointer; position: relative; overflow: hidden; }
+  .sol-arch-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--accent-blue), transparent); opacity: 0; transition: opacity 0.3s ease; }
+  .sol-arch-card:hover::before { opacity: 1; }
+  .sol-arch-card:hover { border-color: var(--border-glow); transform: translateY(-4px); background: var(--bg-tertiary); box-shadow: 0 15px 50px rgba(0,0,0,0.3); }
+  .sol-arch-card.active { border-color: var(--accent-blue); background: var(--bg-tertiary); }
+  .sol-arch-card.active::before { opacity: 1; }
+  .sol-arch-icon { font-size: 1.4rem; margin-bottom: 0.75rem; }
+  .sol-arch-title { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.3rem; }
+  .sol-arch-desc { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; }
+  .sol-arch-detail { max-width: 900px; margin: 2rem auto 0; padding: 1.5rem; border-radius: 12px; background: var(--bg-secondary); border: 1px solid var(--border-subtle); display: none; }
+  .sol-arch-detail.active { display: block; animation: fadeIn 0.4s ease; }
+  .sol-detail-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .sol-detail-body { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
+  .sol-detail-body strong { color: var(--text-primary); }
+
+  /* PHASE 4: RESUME */
+  .resume-card { max-width: 600px; margin: 0 auto; padding: 2rem; border-radius: 16px; background: var(--bg-secondary); border: 1px solid var(--border-subtle); text-align: center; }
+  .resume-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .resume-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .resume-desc { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
+  .resume-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; border-radius: 8px; background: var(--text-primary); color: var(--bg-primary); font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease; border: none; cursor: pointer; }
+  .resume-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,255,255,0.15); }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .about-grid { grid-template-columns: 1fr; }
+    .hero-tags { gap: 0.4rem; }
+    .hero-tag { font-size: 0.7rem; padding: 0.3rem 0.7rem; }
+    .section { padding: 4rem 1.5rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .voice-diagram { padding: 1rem; }
+    .diagram-node { font-size: 0.7rem; padding: 0.5rem 0.8rem; }
+    .case-metrics { grid-template-columns: 1fr; }
+    .case-lessons { grid-template-columns: 1fr; }
+    .method-step { gap: 1rem; }
+    .sol-arch-grid { grid-template-columns: 1fr; }
+    .arch-canvas { padding: 1rem; }
+  }
+  </style>
+<base target="_blank">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-logo">AVS</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#customers">Customers</a></li>
+    <li><a href="#voice">Voice AI</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#methodology">Methodology</a></li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#case-study">Case Study</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get in Touch</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="hero-badge-dot"></span>Available for Forward Deployed Engineering roles</div>
+    <h1 class="hero-name">Aditya Vikram Singh</h1>
+    <p class="hero-title">Forward Deployed Engineer &middot; Enterprise AI Solutions</p>
+    <div class="hero-tags">
+      <span class="hero-tag">Enterprise AI</span><span class="hero-tag">Customer Engineering</span><span class="hero-tag">Voice AI</span><span class="hero-tag">Solution Architecture</span>
+      <span class="hero-tag">Enterprise Integrations</span><span class="hero-tag">Conversational AI</span><span class="hero-tag">APIs</span><span class="hero-tag">Generative AI</span>
+    </div>
+    <div class="hero-cta-group">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-secondary">Contact</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div class="hero-scroll-line"></div></div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-header reveal">
+    <div class="section-label">01 &mdash; Philosophy</div>
+    <h2 class="section-title">Not a biography. A philosophy of building.</h2>
+    <p class="section-desc">I don't write code. I solve enterprise problems that happen to involve code.</p>
+  </div>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p>My work sits at the intersection of <strong>enterprise software</strong> and <strong>customer obsession</strong>. Every deployment starts with understanding the business outcome, not the technology stack.</p>
+      <p>I believe in <strong>systems thinking</strong> &mdash; seeing the full picture from customer discovery through production support. The best architectures are the ones that don't just work on day one, but keep working when the customer scales.</p>
+      <p>AI isn't magic. It's a tool. My job is to bridge the gap between what AI <em>can</em> do and what the enterprise <em>needs</em> it to do &mdash; securely, reliably, and at scale.</p>
+    </div>
+    <div class="about-pillars reveal">
+      <div class="pillar"><div class="pillar-icon">&#127919;</div><div class="pillar-title">Business Outcomes First</div><div class="pillar-desc">Technology is judged by the business value it creates, not by how elegant the code is.</div></div>
+      <div class="pillar"><div class="pillar-icon">&#127959;</div><div class="pillar-title">Systems Thinking</div><div class="pillar-desc">Understanding how components interact across the entire enterprise ecosystem.</div></div>
+      <div class="pillar"><div class="pillar-icon">&#129309;</div><div class="pillar-title">Customer Obsession</div><div class="pillar-desc">Deep discovery, active listening, and relentless focus on the customer's success.</div></div>
+      <div class="pillar"><div class="pillar-icon">&#9889;</div><div class="pillar-title">Problem Solving</div><div class="pillar-desc">Breaking complex challenges into solvable pieces and executing with precision.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience" style="background: var(--bg-secondary); border-radius: 24px; margin: 0 1rem; max-width: calc(1200px - 2rem);">
+  <div class="section-header reveal">
+    <div class="section-label">02 &mdash; Experience</div>
+    <h2 class="section-title">Building at the frontier of enterprise AI.</h2>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item" data-delay="0">
+      <div class="timeline-date">2022 &mdash; Present</div>
+      <div class="timeline-role">Senior Technical Consultant</div>
+      <div class="timeline-company">Sprinklr</div>
+      <div class="timeline-desc">Leading enterprise customer engagements from discovery through production. Architecting integrations for Fortune 500 companies. Driving AI adoption across contact center and social media management platforms.</div>
+      <div class="timeline-tags"><span class="timeline-tag">Solution Architecture</span><span class="timeline-tag">Customer Discovery</span><span class="timeline-tag">Production Support</span><span class="timeline-tag">Voice AI</span><span class="timeline-tag">Enterprise Integrations</span></div>
+    </div>
+    <div class="timeline-item" data-delay="100">
+      <div class="timeline-date">2020 &mdash; 2022</div>
+      <div class="timeline-role">Technical Consultant</div>
+      <div class="timeline-company">Sprinklr</div>
+      <div class="timeline-desc">Delivered complex technical implementations for global enterprise customers. Specialized in contact center integrations, CTI adapters, and real-time data pipelines. Built trust through consistent delivery and deep technical expertise.</div>
+      <div class="timeline-tags"><span class="timeline-tag">CTI Integration</span><span class="timeline-tag">API Design</span><span class="timeline-tag">Customer Onboarding</span><span class="timeline-tag">UAT</span></div>
+    </div>
+    <div class="timeline-item" data-delay="200">
+      <div class="timeline-date">2018 &mdash; 2020</div>
+      <div class="timeline-role">Integrations Engineer</div>
+      <div class="timeline-company">Sprinklr</div>
+      <div class="timeline-desc">Built and maintained enterprise integration frameworks. Developed deep expertise in REST APIs, OAuth/OIDC flows, webhook architectures, and distributed systems. Became the go-to engineer for the most complex integration challenges.</div>
+      <div class="timeline-tags"><span class="timeline-tag">REST APIs</span><span class="timeline-tag">OAuth / OIDC</span><span class="timeline-tag">Webhooks</span><span class="timeline-tag">Distributed Systems</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMERS -->
+<section class="section" id="customers">
+  <div class="section-header reveal">
+    <div class="section-label">03 &mdash; Enterprise Customers</div>
+    <h2 class="section-title">Trusted by the world's largest enterprises.</h2>
+    <p class="section-desc">Supported through Sprinklr. These were enterprise customers I delivered solutions for &mdash; never implying direct employment.</p>
+  </div>
+  <div class="customers-grid reveal">
+    <div class="customer-card">
+      <div class="customer-logo">BT</div><div class="customer-domain">Telecommunications &middot; Global</div>
+      <div class="customer-challenge">Complex contact center integration requiring real-time CTI adapter deployment, SIP transfer handling, and enterprise-grade security across 30,000+ agent seats.</div>
+      <div class="customer-outcome"><strong>Outcome:</strong> Production deployment handling millions of interactions with sub-second latency. Zero-downtime architecture.</div>
+      <div class="customer-disclaimer">Supported through Sprinklr</div>
+    </div>
+    <div class="customer-card">
+      <div class="customer-logo">DT</div><div class="customer-domain">Telecommunications &middot; Europe</div>
+      <div class="customer-challenge">Multi-region voice infrastructure requiring VoIP integration, carrier-grade SIP trunking, and compliance with German data residency requirements.</div>
+      <div class="customer-outcome"><strong>Outcome:</strong> Unified voice platform across 12 countries. Reduced agent handle time by 23% through intelligent routing.</div>
+      <div class="customer-disclaimer">Supported through Sprinklr</div>
+    </div>
+    <div class="customer-card">
+      <div class="customer-logo">Dell</div><div class="customer-domain">Technology &middot; Global</div>
+      <div class="customer-challenge">Enterprise social media management at scale &mdash; integrating with existing CRM, ticketing systems, and custom workflows for 50+ brands under the Dell Technologies umbrella.</div>
+      <div class="customer-outcome"><strong>Outcome:</strong> Unified customer engagement platform processing 2M+ monthly interactions with 99.99% uptime.</div>
+      <div class="customer-disclaimer">Supported through Sprinklr</div>
+    </div>
+    <div class="customer-card">
+      <div class="customer-logo">Pfizer</div><div class="customer-domain">Pharmaceutical &middot; Global</div>
+      <div class="customer-challenge">Highly regulated environment requiring GxP-compliant integrations, audit trails, and secure data handling for customer care across 70+ markets.</div>
+      <div class="customer-outcome"><strong>Outcome:</strong> Compliant enterprise solution deployed across regulated markets with full audit capability and SOC2 alignment.</div>
+      <div class="customer-disclaimer">Supported through Sprinklr</div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE AI -->
+<section class="section" id="voice" style="background: var(--bg-secondary); border-radius: 24px; margin: 0 1rem; max-width: calc(1200px - 2rem);">
+  <div class="section-header reveal" style="text-align:center; margin: 0 auto;">
+    <div class="section-label">04 &mdash; Voice AI</div>
+    <h2 class="section-title">Deep expertise in enterprise voice infrastructure.</h2>
+    <p class="section-desc">Voice AI isn't just chatbots with audio. It's telephony, SIP, CTI, carrier integrations, and production systems that can't fail.</p>
+  </div>
+  <div class="voice-hero reveal">
+    <div class="voice-diagram">
+      <div class="diagram-node">PSTN / Carrier</div><span class="diagram-arrow">&rarr;</span>
+      <div class="diagram-node">SIP Trunk</div><span class="diagram-arrow">&rarr;</span>
+      <div class="diagram-node">SBC</div><span class="diagram-arrow">&rarr;</span>
+      <div class="diagram-node">CCaaS Platform</div><span class="diagram-arrow">&rarr;</span>
+      <div class="diagram-node">CTI Adapter</div><span class="diagram-arrow">&rarr;</span>
+      <div class="diagram-node">CRM / AI Agent</div>
+    </div>
+    <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 1rem; font-family: 'JetBrains Mono', monospace;">Enterprise Call Flow Architecture</p>
+  </div>
+  <div class="voice-capabilities reveal">
+    <div class="capability"><div class="capability-term">Conversational AI</div><div class="capability-desc">Designing AI-driven voice interactions that understand context, handle interruptions, and escalate intelligently.</div></div>
+    <div class="capability"><div class="capability-term">CCaaS</div><div class="capability-desc">Contact Center as a Service &mdash; cloud-native contact center platforms with elastic scaling and global reach.</div></div>
+    <div class="capability"><div class="capability-term">CTI</div><div class="capability-desc">Computer Telephony Integration &mdash; screen pops, click-to-dial, call control, and real-time data synchronization.</div></div>
+    <div class="capability"><div class="capability-term">SIP Transfer</div><div class="capability-desc">Session Initiation Protocol call routing, blind/warm transfers, and carrier interoperability.</div></div>
+    <div class="capability"><div class="capability-term">VoIP</div><div class="capability-desc">Voice over IP architecture &mdash; codec selection, QoS, jitter buffers, and packet loss mitigation.</div></div>
+    <div class="capability"><div class="capability-term">Telephony Integrations</div><div class="capability-desc">Connecting legacy PBX systems with modern cloud platforms without disrupting operations.</div></div>
+    <div class="capability"><div class="capability-term">Voice Connect</div><div class="capability-desc">Real-time voice streaming, WebRTC, and low-latency audio pipelines for AI processing.</div></div>
+    <div class="capability"><div class="capability-term">Production Deployments</div><div class="capability-desc">Zero-downtime rollouts, canary releases, and hypercare for mission-critical voice systems.</div></div>
+  </div>
+
+  <!-- PHASE 2: INTERACTIVE VOICE ARCHITECTURE SVG -->
+  <div class="arch-section" style="margin-top: 4rem;">
+    <div class="section-header reveal" style="text-align:center; margin: 0 auto;">
+      <div class="section-label">04a &mdash; System Architecture</div>
+      <h2 class="section-title">Interactive Voice Architecture</h2>
+      <p class="section-desc">Hover over each component to see its role in the enterprise voice pipeline.</p>
+    </div>
+    <div class="arch-canvas reveal" id="voiceArchCanvas">
+      <div class="arch-title">Enterprise Voice Integration &mdash; System Architecture</div>
+      <svg class="arch-svg" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#52525b"/></marker>
+          <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.06)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0.02)"/></linearGradient>
+        </defs>
+        <g class="arch-node" data-tooltip="Public Switched Telephone Network. The global circuit-switched telephone network. Carriers route calls to enterprise SBCs.">
+          <rect x="20" y="160" width="100" height="60" rx="8" fill="url(#nodeGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+          <text x="70" y="185" text-anchor="middle" fill="#f5f5f7" font-size="11" font-family="JetBrains Mono" font-weight="600">PSTN</text>
+          <text x="70" y="202" text-anchor="middle" fill="#52525b" font-size="8" font-family="JetBrains Mono">Carrier Network</text>
+        </g>
+        <line x1="120" y1="190" x2="170" y2="190" stroke="#52525b" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <text x="145" y="182" text-anchor="middle" fill="#52525b" font-size="7" font-family="JetBrains Mono">SIP</text>
+        <g class="arch-node" data-tooltip="Session Border Controller. Security gateway between carrier network and enterprise. Handles NAT traversal, encryption, and DoS protection.">
+          <rect x="170" y="145" width="110" height="90" rx="8" fill="url(#nodeGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+          <text x="225" y="175" text-anchor="middle" fill="#f5f5f7" font-size="11" font-family="JetBrains Mono" font-weight="600">SBC</text>
+          <text x="225" y="192" text-anchor="middle" fill="#52525b" font-size="8" font-family="JetBrains Mono">Session Border</text>
+          <text x="225" y="205" text-anchor="middle" fill="#52525b" font-size="8" font-family="JetBrains Mono">Controller</text>
+        </g>
+        <line x1="280" y1="190" x2="330" y2="190" stroke="#52525b" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <text x="305" y="182" text-anchor="middle" fill="#52525b" font-size="7" font-family="JetBrains Mono">SIP</text>
+        <g class="arch-node" data-tooltip="Contact Center as a Service. Cloud-native platform handling ACD, IVR, queue management, and agent routing. Sprinklr voice layer.">
+          <rect x="330" y="140" width="120" height="100" rx="8" fill="url(#nodeGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+          <text x="390" y="170" text-anchor="middle" fill="#f5f5f7" font-size="11" font-family="JetBrains Mono" font-weight="600">CCaaS</text>
+          <text x="390" y="187" text-anchor="middle" fill="#52525b" font-size="8" font-family="JetBrains Mono">Contact Center</text>
+          <text x="390" y="200" text-anchor="middle" fill="#52525b" font-size="8" font-family="JetBrains Mono">ACD / IVR / Queue</text>
+          <text x="390" y="213" text-anchor="middle" fill="#52525b" font-size="8" font-family="JetBrains Mono">Sprinklr Voice</text>
+        </g>
+        <line x1="450" y1="190" x2="500" y2="190" stroke="#52525b" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <text x="475" y="182" text-anchor="middle" fill="#52525b" font-size="7" font-family="JetBrains Mono">CTI</text>
+        <g class="arch-node" data-tooltip="Computer Telephony Integration Adapter. Bridges the CCaaS platform with CRM systems. Handles screen pops, click-to-dial, and real-time call events.">
+          <rect x="500" y="145" width="120" height="90" rx="8" fill="url(#nodeGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+          <text x="560" y="175" text-anchor="middle" fill="#f5f5f7" font-size="11" font-family="JetBrains Mono" font-weight="600">CTI Adapter</text>
+          <text x="560" y="192" text-anchor="middle" fill="#52525b" font-size="8" font-family="JetBrains Mono">Screen Pops</text>
+          <text x="560" y="205" text-anchor="middle" fill="#52525b" font-size="8" font-family="JetBrains Mono">Call Events</text>
+        </g>
+        <line x1="620" y1="190" x2="670" y2="190" stroke="#52525b" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        <text x="645" y="182" text-anchor="middle" fill="#52525b" font-size="7" font-family="JetBrains Mono">REST</text>
+        <g class="arch-node" data-tooltip="Customer Relationship Management. Salesforce, Service Cloud, or custom CRM. Receives real-time call data, customer context, and AI insights.">
+          <rect x="670" y="155" width="110" height="70" rx="8" fill="url(#nodeGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+          <text x="725" y="180" text-anchor="middle" fill="#f5f5f7" font-size="11" font-family="JetBrains Mono" font-weight="600">CRM</text>
+          <text x="725" y="197" text-anchor="middle" fill="#52525b" font-size="8" font-family="JetBrains Mono">Customer Data</text>
+        </g>
+        <g class="arch-node" data-tooltip="AI Agent Layer. Conversational AI, sentiment analysis, real-time transcription, and next-best-action recommendations. Connected via WebSocket or SSE.">
+          <rect x="330" y="280" width="200" height="70" rx="8" fill="url(#nodeGrad)" stroke="rgba(96,165,250,0.3)" stroke-width="1.5"/>
+          <text x="430" y="305" text-anchor="middle" fill="#60a5fa" font-size="11" font-family="JetBrains Mono" font-weight="600">AI Agent Layer</text>
+          <text x="430" y="322" text-anchor="middle" fill="#52525b" font-size="8" font-family="JetBrains Mono">Conversational AI &middot; Transcription &middot; NBO</text>
+          <text x="430" y="335" text-anchor="middle" fill="#52525b" font-size="8" font-family="JetBrains Mono">OpenAI &middot; LangGraph &middot; Streaming</text>
+        </g>
+        <line x1="390" y1="240" x2="390" y2="280" stroke="#60a5fa" stroke-width="1" stroke-dasharray="4,4"/>
+        <line x1="560" y1="235" x2="480" y2="280" stroke="#60a5fa" stroke-width="1" stroke-dasharray="4,4"/>
+        <line x1="725" y1="225" x2="530" y2="280" stroke="#60a5fa" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="430" y="265" text-anchor="middle" fill="#60a5fa" font-size="8" font-family="JetBrains Mono">WebSocket / SSE</text>
+        <g class="arch-node" data-tooltip="Observability Stack. Real-time monitoring, alerting, and distributed tracing across the entire voice pipeline. Critical for production SLAs.">
+          <rect x="280" y="30" width="240" height="50" rx="8" fill="url(#nodeGrad)" stroke="rgba(251,191,36,0.3)" stroke-width="1.5"/>
+          <text x="400" y="50" text-anchor="middle" fill="#fbbf24" font-size="10" font-family="JetBrains Mono" font-weight="600">Observability</text>
+          <text x="400" y="65" text-anchor="middle" fill="#52525b" font-size="8" font-family="JetBrains Mono">Monitoring &middot; Alerting &middot; Tracing &middot; Logs</text>
+        </g>
+        <line x1="340" y1="80" x2="225" y2="145" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+        <line x1="400" y1="80" x2="390" y2="140" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+        <line x1="460" y1="80" x2="560" y2="145" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+      </svg>
+      <div class="arch-tooltip" id="archTooltip"></div>
+      <div class="arch-legend">
+        <div class="arch-legend-item"><div class="arch-legend-dot" style="background:#60a5fa;"></div>AI Layer</div>
+        <div class="arch-legend-item"><div class="arch-legend-dot" style="background:#fbbf24;"></div>Observability</div>
+        <div class="arch-legend-item"><div class="arch-legend-dot" style="background:rgba(255,255,255,0.2);"></div>Core Pipeline</div>
+        <div class="arch-legend-item"><div class="arch-legend-dot" style="background:transparent;border:1px dashed #52525b;"></div>Data Flow</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 2: SEQUENCE DIAGRAM -->
+  <div class="arch-section">
+    <div class="section-header reveal" style="text-align:center; margin: 0 auto;">
+      <div class="section-label">04b &mdash; Call Flow Sequence</div>
+      <h2 class="section-title">Inbound Call Sequence</h2>
+      <p class="section-desc">Step-by-step flow of an enterprise inbound call through the integrated system.</p>
+    </div>
+    <div class="reveal" style="max-width: 700px; margin: 0 auto;">
+      <div class="seq-step"><div class="seq-num">1</div><div class="seq-content"><div class="seq-title">Caller dials enterprise number</div><div class="seq-desc">PSTN routes call through carrier network to enterprise SBC.</div></div></div>
+      <div class="seq-arrow">&#8595;</div>
+      <div class="seq-step"><div class="seq-num">2</div><div class="seq-content"><div class="seq-title">SBC validates and secures session</div><div class="seq-desc">NAT traversal, TLS encryption, SIP header inspection, DoS filtering.</div></div></div>
+      <div class="seq-arrow">&#8595;</div>
+      <div class="seq-step"><div class="seq-num">3</div><div class="seq-content"><div class="seq-title">CCaaS receives call and runs IVR</div><div class="seq-desc">ACD queues the call. IVR collects intent. AI layer transcribes in real-time.</div></div></div>
+      <div class="seq-arrow">&#8595;</div>
+      <div class="seq-step"><div class="seq-num">4</div><div class="seq-content"><div class="seq-title">CTI Adapter pushes to CRM</div><div class="seq-desc">Screen pop with customer context, interaction history, and AI-generated next-best-action.</div></div></div>
+      <div class="seq-arrow">&#8595;</div>
+      <div class="seq-step"><div class="seq-num">5</div><div class="seq-content"><div class="seq-title">Agent receives call with full context</div><div class="seq-desc">Zero-context switching. Agent sees everything before accepting the call.</div></div></div>
+      <div class="seq-arrow">&#8595;</div>
+      <div class="seq-step"><div class="seq-num">6</div><div class="seq-content"><div class="seq-title">Real-time AI assistance during call</div><div class="seq-desc">Live transcription, sentiment alerts, knowledge suggestions, escalation triggers.</div></div></div>
+      <div class="seq-arrow">&#8595;</div>
+      <div class="seq-step"><div class="seq-num">7</div><div class="seq-content"><div class="seq-title">Post-call wrap-up and analytics</div><div class="seq-desc">Call summary auto-generated. Sentiment score recorded. CRM updated. Analytics pipeline triggered.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="section-header reveal">
+    <div class="section-label">05 &mdash; AI Projects</div>
+    <h2 class="section-title">Building the future of enterprise AI.</h2>
+    <p class="section-desc">Production-ready AI systems designed for real business problems.</p>
+  </div>
+  <div class="projects-grid reveal">
+    <div class="project-card">
+      <div class="project-header"><div class="project-icon">&#129504;</div><div class="project-title">Enterprise Knowledge Assistant</div></div>
+      <div class="project-tech"><span class="tech-badge">FastAPI</span><span class="tech-badge">LangGraph</span><span class="tech-badge">RAG</span><span class="tech-badge">OpenAI</span><span class="tech-badge">Vector Search</span></div>
+      <div class="project-body">
+        <div class="project-section"><div class="project-section-label">Problem</div>Enterprise support teams drowning in unstructured documentation, unable to find answers in real time.</div>
+        <div class="project-section"><div class="project-section-label">Solution</div>RAG-based knowledge assistant with LangGraph orchestration, multi-step reasoning, and source attribution.</div>
+        <div class="project-section"><div class="project-section-label">Business Value</div>Reduced average resolution time by 40%. Increased first-contact resolution rate.</div>
+        <div class="project-section"><div class="project-section-label">Architecture</div>FastAPI backend &rarr; OpenAI embeddings &rarr; Pinecone vector store &rarr; LangGraph agent &rarr; Streaming SSE response.</div>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-header"><div class="project-icon">&#129302;</div><div class="project-title">Technical Support Agent</div></div>
+      <div class="project-tech"><span class="tech-badge">OpenAI</span><span class="tech-badge">MCP</span><span class="tech-badge">FastAPI</span><span class="tech-badge">Function Calling</span></div>
+      <div class="project-body">
+        <div class="project-section"><div class="project-section-label">Problem</div>L1 support bottleneck &mdash; repetitive tickets consuming senior engineer time.</div>
+        <div class="project-section"><div class="project-section-label">Solution</div>Autonomous AI agent using MCP (Model Context Protocol) to interact with ticketing systems, run diagnostics, and resolve common issues.</div>
+        <div class="project-section"><div class="project-section-label">Business Value</div>60% of L1 tickets resolved without human intervention. Engineers focused on complex problems.</div>
+        <div class="project-section"><div class="project-section-label">Architecture</div>OpenAI GPT-4 &rarr; MCP tools &rarr; Internal APIs &rarr; Ticket system &rarr; Slack notifications.</div>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-header"><div class="project-icon">&#9881;</div><div class="project-title">Workflow Automation Assistant</div></div>
+      <div class="project-tech"><span class="tech-badge">Prompt Engineering</span><span class="tech-badge">LLMs</span><span class="tech-badge">Python</span><span class="tech-badge">Enterprise APIs</span></div>
+      <div class="project-body">
+        <div class="project-section"><div class="project-section-label">Problem</div>Manual workflow steps across CRM, ticketing, and communication tools causing delays and errors.</div>
+        <div class="project-section"><div class="project-section-label">Solution</div>LLM-powered workflow engine that interprets natural language instructions and executes multi-step automations across enterprise systems.</div>
+        <div class="project-section"><div class="project-section-label">Business Value</div>15+ hours saved per week per team. Eliminated human error in routine data entry.</div>
+        <div class="project-section"><div class="project-section-label">Architecture</div>Natural language &rarr; Intent classification &rarr; Step generation &rarr; API orchestration &rarr; Validation &rarr; Audit log.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASE 4: METHODOLOGY -->
+<section class="section" id="methodology" style="background: var(--bg-secondary); border-radius: 24px; margin: 0 1rem; max-width: calc(1200px - 2rem);">
+  <div class="section-header reveal">
+    <div class="section-label">06 &mdash; Forward Deployed Engineering</div>
+    <h2 class="section-title">My delivery methodology.</h2>
+    <p class="section-desc">A repeatable process that takes enterprise customers from discovery to production &mdash; and beyond.</p>
+  </div>
+  <div class="method-timeline reveal">
+    <div class="method-step">
+      <div class="method-num">1</div>
+      <div class="method-content"><div class="method-title">Customer Discovery</div><div class="method-desc">Deep stakeholder interviews, process mapping, and pain point identification. Understanding the business before touching the technology.</div></div>
+    </div>
+    <div class="method-step">
+      <div class="method-num">2</div>
+      <div class="method-content"><div class="method-title">Requirements Definition</div><div class="method-desc">Functional and non-functional requirements. Security, compliance, scalability, and integration constraints documented and validated.</div></div>
+    </div>
+    <div class="method-step">
+      <div class="method-num">3</div>
+      <div class="method-content"><div class="method-title">Architecture Design</div><div class="method-desc">System architecture, data flow diagrams, API contracts, and integration patterns. Reviewed with customer architects for alignment.</div></div>
+    </div>
+    <div class="method-step">
+      <div class="method-num">4</div>
+      <div class="method-content"><div class="method-title">Integration Design</div><div class="method-desc">Detailed integration specifications, authentication flows, error handling, retry logic, and fallback strategies.</div></div>
+    </div>
+    <div class="method-step">
+      <div class="method-num">5</div>
+      <div class="method-content"><div class="method-title">Implementation</div><div class="method-desc">Agile sprints with weekly demos. Continuous integration, automated testing, and incremental delivery.</div></div>
+    </div>
+    <div class="method-step">
+      <div class="method-num">6</div>
+      <div class="method-content"><div class="method-title">UAT &amp; Validation</div><div class="method-desc">End-to-end testing with real customer data. Performance benchmarking, security validation, and compliance verification.</div></div>
+    </div>
+    <div class="method-step">
+      <div class="method-num">7</div>
+      <div class="method-content"><div class="method-title">Production Deployment</div><div class="method-desc">Zero-downtime cutover, canary releases, rollback plans, and real-time monitoring dashboards.</div></div>
+    </div>
+    <div class="method-step">
+      <div class="method-num">8</div>
+      <div class="method-content"><div class="method-title">Hypercare</div><div class="method-desc">Dedicated support for the first 30 days. Daily standups, rapid issue resolution, and stabilization monitoring.</div></div>
+    </div>
+    <div class="method-step">
+      <div class="method-num">9</div>
+      <div class="method-content"><div class="method-title">Continuous Improvement</div><div class="method-desc">Quarterly business reviews, optimization recommendations, and roadmap planning for the next phase.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASE 4: SOLUTION ARCHITECTURE INTERACTIVE -->
+<section class="section" id="architecture">
+  <div class="section-header reveal">
+    <div class="section-label">07 &mdash; Solution Architecture</div>
+    <h2 class="section-title">Interactive architecture patterns.</h2>
+    <p class="section-desc">Click any card to explore the pattern in detail.</p>
+  </div>
+  <div class="sol-arch-grid reveal" id="solArchGrid">
+    <div class="sol-arch-card" data-detail="rest">
+      <div class="sol-arch-icon">&#128268;</div>
+      <div class="sol-arch-title">REST APIs</div>
+      <div class="sol-arch-desc">Resource-oriented architecture with OpenAPI specs, versioning, and rate limiting.</div>
+    </div>
+    <div class="sol-arch-card" data-detail="oauth">
+      <div class="sol-arch-icon">&#128272;</div>
+      <div class="sol-arch-title">OAuth / OIDC</div>
+      <div class="sol-arch-desc">Enterprise identity federation with SAML, OAuth 2.0, and OpenID Connect flows.</div>
+    </div>
+    <div class="sol-arch-card" data-detail="jwt">
+      <div class="sol-arch-icon">&#128221;</div>
+      <div class="sol-arch-title">JWT &amp; Claims</div>
+      <div class="sol-arch-desc">Stateless authentication with signed tokens, custom claims, and token refresh strategies.</div>
+    </div>
+    <div class="sol-arch-card" data-detail="webhooks">
+      <div class="sol-arch-icon">&#128225;</div>
+      <div class="sol-arch-title">Webhooks</div>
+      <div class="sol-arch-desc">Event-driven integrations with retry logic, idempotency keys, and signature verification.</div>
+    </div>
+    <div class="sol-arch-card" data-detail="distributed">
+      <div class="sol-arch-icon">&#127760;</div>
+      <div class="sol-arch-title">Distributed Systems</div>
+      <div class="sol-arch-desc">Microservices, event-driven architecture, message queues, and eventual consistency.</div>
+    </div>
+    <div class="sol-arch-card" data-detail="crm">
+      <div class="sol-arch-icon">&#128101;</div>
+      <div class="sol-arch-title">CRM Integration</div>
+      <div class="sol-arch-desc">Bi-directional sync with Salesforce, Service Cloud, and custom CRM platforms.</div>
+    </div>
+    <div class="sol-arch-card" data-detail="messaging">
+      <div class="sol-arch-icon">&#128172;</div>
+      <div class="sol-arch-title">Enterprise Messaging</div>
+      <div class="sol-arch-desc">Unified messaging across email, SMS, WhatsApp, and social channels.</div>
+    </div>
+    <div class="sol-arch-card" data-detail="ai-agents">
+      <div class="sol-arch-icon">&#129302;</div>
+      <div class="sol-arch-title">AI Agents</div>
+      <div class="sol-arch-desc">Autonomous agents with tool use, memory, planning, and human-in-the-loop guardrails.</div>
+    </div>
+  </div>
+  <div class="sol-arch-detail" id="solDetailRest">
+    <div class="sol-detail-title">REST API Architecture</div>
+    <div class="sol-detail-body">
+      <strong>Design Principles:</strong> Resource-oriented URLs, HTTP method semantics, consistent naming conventions, and HATEOAS where appropriate.<br><br>
+      <strong>Enterprise Patterns:</strong> API versioning via URL or header, pagination with cursor-based offsets, idempotency keys for POST requests, and comprehensive OpenAPI documentation.<br><br>
+      <strong>Security:</strong> OAuth 2.0 bearer tokens, API key rotation, IP allowlisting, and rate limiting per tenant.<br><br>
+      <strong>Observability:</strong> Distributed tracing with correlation IDs, structured logging, and RED metrics (Rate, Errors, Duration).
+    </div>
+  </div>
+  <div class="sol-arch-detail" id="solDetailOAuth">
+    <div class="sol-detail-title">OAuth 2.0 / OIDC Architecture</div>
+    <div class="sol-detail-body">
+      <strong>Flows:</strong> Authorization Code with PKCE for SPAs, Client Credentials for M2M, and Device Code for IoT/CLI applications.<br><br>
+      <strong>Enterprise Integration:</strong> SAML 2.0 identity provider federation, SCIM provisioning, and just-in-time user provisioning.<br><br>
+      <strong>Token Management:</strong> Short-lived access tokens (15 min), refresh token rotation, and secure token storage in HttpOnly cookies.<br><br>
+      <strong>Multi-Tenant:</strong> Issuer validation, tenant-aware claims, and dynamic client registration for enterprise SSO.
+    </div>
+  </div>
+  <div class="sol-arch-detail" id="solDetailJwt">
+    <div class="sol-detail-title">JWT &amp; Claims Architecture</div>
+    <div class="sol-detail-body">
+      <strong>Token Structure:</strong> JWS with RS256 signing, standard claims (sub, iss, aud, exp, iat), and custom enterprise claims (tenant_id, roles, permissions).<br><br>
+      <strong>Validation:</strong> Signature verification via JWKS endpoint, audience validation, issuer whitelisting, and clock skew tolerance.<br><br>
+      <strong>Claims-Based Auth:</strong> Role-based access control (RBAC) and attribute-based access control (ABAC) using claims from identity provider.<br><br>
+      <strong>Refresh Strategy:</strong> Sliding refresh windows, family detection for token theft, and secure refresh token binding.
+    </div>
+  </div>
+  <div class="sol-arch-detail" id="solDetailWebhooks">
+    <div class="sol-detail-title">Webhook Architecture</div>
+    <div class="sol-detail-body">
+      <strong>Delivery:</strong> At-least-once delivery with exponential backoff, circuit breakers for failing endpoints, and dead-letter queues.<br><br>
+      <strong>Security:</strong> HMAC-SHA256 signature verification, timestamp validation to prevent replay attacks, and TLS 1.3 enforcement.<br><br>
+      <strong>Idempotency:</strong> Event IDs for deduplication, idempotency keys for API calls, and exactly-once processing guarantees.<br><br>
+      <strong>Observability:</strong> Webhook delivery logs, retry attempt tracking, and endpoint health dashboards.
+    </div>
+  </div>
+  <div class="sol-arch-detail" id="solDetailDistributed">
+    <div class="sol-detail-title">Distributed Systems Architecture</div>
+    <div class="sol-detail-body">
+      <strong>Patterns:</strong> Saga pattern for distributed transactions, CQRS for read/write separation, and event sourcing for audit trails.<br><br>
+      <strong>Communication:</strong> Async messaging with Apache Kafka, gRPC for internal services, and REST for external APIs.<br><br>
+      <strong>Resilience:</strong> Circuit breakers, bulkheads, timeouts, retries with jitter, and graceful degradation.<br><br>
+      <strong>Data:</strong> Eventual consistency with conflict resolution, multi-region replication, and CDC (Change Data Capture) pipelines.
+    </div>
+  </div>
+  <div class="sol-arch-detail" id="solDetailCrm">
+    <div class="sol-detail-title">CRM Integration Architecture</div>
+    <div class="sol-detail-body">
+      <strong>Sync Patterns:</strong> Real-time bi-directional sync via webhooks, batch ETL for historical data, and conflict resolution with last-write-wins or custom rules.<br><br>
+      <strong>Data Mapping:</strong> Field-level mapping, custom object support, and schema evolution handling.<br><br>
+      <strong>Performance:</strong> Bulk API for large datasets, composite API for related records, and caching layers for read-heavy operations.<br><br>
+      <strong>Platforms:</strong> Salesforce REST/Bulk APIs, Service Cloud CTI, Microsoft Dynamics, and custom CRM via generic adapter pattern.
+    </div>
+  </div>
+  <div class="sol-arch-detail" id="solDetailMessaging">
+    <div class="sol-detail-title">Enterprise Messaging Architecture</div>
+    <div class="sol-detail-body">
+      <strong>Channels:</strong> Email (SMTP/IMAP), SMS (Twilio), WhatsApp Business API, Facebook Messenger, Twitter DM, and in-app chat.<br><br>
+      <strong>Routing:</strong> Intent-based routing, agent skill matching, priority queues, and overflow handling.<br><br>
+      <strong>Context:</strong> Unified customer profile across channels, conversation history preservation, and cross-channel handoff.<br><br>
+      <strong>Compliance:</strong> Opt-in/opt-out management, retention policies, and regulatory compliance (GDPR, TCPA, CAN-SPAM).
+    </div>
+  </div>
+  <div class="sol-arch-detail" id="solDetailAiAgents">
+    <div class="sol-detail-title">AI Agent Architecture</div>
+    <div class="sol-detail-body">
+      <strong>Agent Loop:</strong> Perception (input parsing) &rarr; Reasoning (LLM planning) &rarr; Action (tool execution) &rarr; Observation (result feedback).<br><br>
+      <strong>Tools:</strong> MCP (Model Context Protocol), function calling, API wrappers, and custom enterprise connectors.<br><br>
+      <strong>Memory:</strong> Short-term context window, long-term vector store, and episodic memory for conversation history.<br><br>
+      <strong>Guardrails:</strong> Human-in-the-loop for high-stakes actions, output validation, safety filters, and audit logging for every decision.
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills" style="background: var(--bg-secondary); border-radius: 24px; margin: 0 1rem; max-width: calc(1200px - 2rem);">
+  <div class="section-header reveal">
+    <div class="section-label">08 &mdash; Technical Skills</div>
+    <h2 class="section-title">The tools I use to solve problems.</h2>
+  </div>
+  <div class="skills-grid reveal">
+    <div class="skill-category">
+      <div class="skill-cat-header"><span class="skill-cat-icon">&#129302;</span><span class="skill-cat-title">AI &amp; ML</span></div>
+      <div class="skill-items">
+        <span class="skill-item">Python</span><span class="skill-item">FastAPI</span><span class="skill-item">LangGraph</span><span class="skill-item">OpenAI</span><span class="skill-item">RAG</span><span class="skill-item">MCP</span><span class="skill-item">Vector Search</span><span class="skill-item">Prompt Engineering</span><span class="skill-item">LLMs</span><span class="skill-item">Function Calling</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-cat-header"><span class="skill-cat-icon">&#128268;</span><span class="skill-cat-title">APIs &amp; Integration</span></div>
+      <div class="skill-items">
+        <span class="skill-item">REST APIs</span><span class="skill-item">OpenAPI</span><span class="skill-item">OAuth 2.0</span><span class="skill-item">OIDC</span><span class="skill-item">JWT</span><span class="skill-item">Webhooks</span><span class="skill-item">GraphQL</span><span class="skill-item">gRPC</span><span class="skill-item">SOAP</span><span class="skill-item">SDK Development</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-cat-header"><span class="skill-cat-icon">&#127970;</span><span class="skill-cat-title">Enterprise</span></div>
+      <div class="skill-items">
+        <span class="skill-item">Solution Architecture</span><span class="skill-item">Customer Engineering</span><span class="skill-item">Technical Consulting</span><span class="skill-item">Voice AI</span><span class="skill-item">CTI</span><span class="skill-item">SIP</span><span class="skill-item">VoIP</span><span class="skill-item">CCaaS</span><span class="skill-item">CRM Integration</span><span class="skill-item">Enterprise Messaging</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-cat-header"><span class="skill-cat-icon">&#9729;</span><span class="skill-cat-title">Systems &amp; Infrastructure</span></div>
+      <div class="skill-items">
+        <span class="skill-item">Distributed Systems</span><span class="skill-item">Microservices</span><span class="skill-item">Event-Driven</span><span class="skill-item">Message Queues</span><span class="skill-item">Docker</span><span class="skill-item">Kubernetes</span><span class="skill-item">AWS</span><span class="skill-item">CI/CD</span><span class="skill-item">Monitoring</span><span class="skill-item">Observability</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASE 3: CASE STUDY -->
+<section class="section" id="case-study">
+  <div class="section-header reveal">
+    <div class="section-label">09 &mdash; Case Study</div>
+    <h2 class="section-title">British Telecom: Enterprise Voice at Scale</h2>
+    <p class="section-desc">A deep-dive into one of the most complex enterprise voice integrations I delivered.</p>
+  </div>
+  <div class="case-study reveal">
+    <div class="case-header">
+      <div class="case-logo">BT</div>
+      <div class="case-meta">
+        <div class="case-client">British Telecom</div>
+        <div class="case-via">Supported through Sprinklr &middot; Global Telecommunications &middot; 30,000+ Agent Seats</div>
+      </div>
+    </div>
+    <div class="case-metrics">
+      <div class="metric-card"><div class="metric-value">30K+</div><div class="metric-label">Agent Seats</div></div>
+      <div class="metric-card"><div class="metric-value">&lt;1s</div><div class="metric-label">Latency</div></div>
+      <div class="metric-card"><div class="metric-value">99.99%</div><div class="metric-label">Uptime SLA</div></div>
+    </div>
+    <div class="case-section">
+      <div class="case-section-title">The Challenge</div>
+      <div class="case-section-body">
+        British Telecom needed to modernize their contact center infrastructure while maintaining service for one of the UK's largest customer bases. The existing system was a patchwork of legacy PBX systems, custom CTI adapters, and manual processes that couldn't scale.<br><br>
+        <strong>Key constraints:</strong> Zero downtime during migration, integration with 12 existing CRM instances, compliance with UK telecom regulations, and support for 30,000+ concurrent agent seats across multiple geographic regions.
+      </div>
+    </div>
+    <div class="case-section">
+      <div class="case-section-title">Discovery</div>
+      <div class="case-section-body">
+        I spent the first 4 weeks embedded with BT's operations team. Shadowed agents, interviewed supervisors, mapped call flows, and documented every integration touchpoint. Discovered that 40% of agent handle time was spent on context switching between systems &mdash; a problem no one had quantified before.<br><br>
+        <strong>Critical finding:</strong> The CTI adapter was dropping screen pops during peak hours due to a race condition in the event queue. This had been accepted as "normal behavior" for years.
+      </div>
+    </div>
+    <div class="case-section">
+      <div class="case-section-title">Architecture</div>
+      <div class="case-section-body">
+        Designed a <strong>zero-downtime migration strategy</strong> using a blue-green deployment pattern. Built a new CTI adapter with event sourcing to eliminate the race condition. Implemented a unified API gateway to normalize data across the 12 CRM instances.<br><br>
+        <strong>Key decisions:</strong> Async event-driven architecture for CTI events, Redis for real-time session state, circuit breakers for CRM fallback, and comprehensive distributed tracing for production observability.
+      </div>
+    </div>
+    <div class="case-section">
+      <div class="case-section-title">Implementation</div>
+      <div class="case-section-body">
+        Delivered in 3-month sprints with weekly demos to BT's architecture board. Built automated test suites simulating 30K concurrent agent sessions. Performed load testing that exceeded peak traffic by 3x.<br><br>
+        <strong>Rollback strategy:</strong> Every component had a 30-second rollback path. The migration was performed region-by-region with real-time monitoring and automatic rollback triggers.
+      </div>
+    </div>
+    <div class="case-section">
+      <div class="case-section-title">Production Support</div>
+      <div class="case-section-body">
+        Provided 24/7 hypercare for the first 30 days post-deployment. Resolved 3 edge cases within hours of detection. Built a runbook with 50+ scenarios for the BT operations team.<br><br>
+        <strong>Outcome:</strong> Zero unplanned downtime during the 6-month stabilization period. Mean time to resolution (MTTR) dropped from 4 hours to 15 minutes.
+      </div>
+    </div>
+    <div class="case-section">
+      <div class="case-section-title">Lessons Learned</div>
+      <div class="case-lessons">
+        <div class="lesson-card"><div class="lesson-title">Discovery is never wasted time</div><div class="lesson-body">The 4 weeks of discovery saved 8 weeks of rework. Understanding the actual problem beats assumptions every time.</div></div>
+        <div class="lesson-card"><div class="lesson-title">Design for the worst day</div><div class="lesson-body">Load testing at 3x peak traffic revealed bottlenecks that would have caused outages during holiday rushes.</div></div>
+        <div class="lesson-card"><div class="lesson-title">Observability is not optional</div><div class="lesson-body">Distributed tracing was the difference between hours and minutes of debugging in production.</div></div>
+        <div class="lesson-card"><div class="lesson-title">Empower the customer team</div><div class="lesson-body">The runbook and training we provided meant BT could self-sustain without vendor dependency.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section class="section" id="awards" style="background: var(--bg-secondary); border-radius: 24px; margin: 0 1rem; max-width: calc(1200px - 2rem);">
+  <div class="section-header reveal">
+    <div class="section-label">10 &mdash; Recognition</div>
+    <h2 class="section-title">Impact that gets noticed.</h2>
+  </div>
+  <div class="awards-grid reveal">
+    <div class="award-card">
+      <div class="award-medal">&#127942;</div>
+      <div><div class="award-title">Performer of the Year</div><div class="award-meta">Sprinklr &middot; 2022, 2023, 2024</div><div class="award-count">3&times; Recipient</div></div>
+    </div>
+    <div class="award-card">
+      <div class="award-medal">&#11088;</div>
+      <div><div class="award-title">Performer of the Quarter</div><div class="award-meta">Sprinklr &middot; Multiple Quarters</div><div class="award-count">5&times; Recipient</div></div>
+    </div>
+    <div class="award-card">
+      <div class="award-medal">&#128161;</div>
+      <div><div class="award-title">Spotlight Award</div><div class="award-meta">Sprinklr &middot; For exceptional customer impact</div><div class="award-count">Recognized by leadership</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="reveal">
+    <div class="section-label" style="margin-bottom:1rem;">11 &mdash; Contact</div>
+    <h2 class="contact-title">Let's build something enterprise-grade.</h2>
+    <p class="contact-desc">I'm actively exploring Forward Deployed Engineering and AI Solutions Architect roles at companies solving hard problems.</p>
+    <div class="contact-links">
+      <a href="https://linkedin.com/in/adityavikramsingh" target="_blank" class="contact-link">LinkedIn</a>
+      <a href="mailto:aditya.vikram.singh@email.com" class="contact-link">Email</a>
+    </div>
+    <div class="resume-card" style="margin-top: 3rem;">
+      <div class="resume-icon">&#128196;</div>
+      <div class="resume-title">Download Resume</div>
+      <div class="resume-desc">Get the full picture in PDF format. Updated July 2026.</div>
+      <a href="#" class="resume-btn" onclick="alert('Please update this link with your actual resume PDF URL. Host on Google Drive, Dropbox, or your own domain and replace the href.')">Download PDF</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 Aditya Vikram Singh. Built with precision.</p>
+  <p style="margin-top:0.5rem; font-size:0.7rem;">Forward Deployed Engineer &middot; Enterprise AI &middot; Voice AI</p>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); });
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, observerOptions);
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+const timelineObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const delay = entry.target.dataset.delay || 0;
+      setTimeout(() => entry.target.classList.add('visible'), parseInt(delay));
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.timeline-item').forEach(el => timelineObserver.observe(el));
+window.addEventListener('scroll', () => {
+  const scrolled = window.pageYOffset;
+  const hero = document.querySelector('.hero-content');
+  if (hero && scrolled < window.innerHeight) {
+    hero.style.transform = `translateY(${scrolled * 0.15}px)`;
+    hero.style.opacity = 1 - (scrolled / (window.innerHeight * 0.8));
+  }
+});
+
+// PHASE 2: Architecture tooltip
+const archCanvas = document.getElementById('voiceArchCanvas');
+const archTooltip = document.getElementById('archTooltip');
+if (archCanvas && archTooltip) {
+  archCanvas.querySelectorAll('.arch-node').forEach(node => {
+    node.addEventListener('mouseenter', (e) => {
+      const text = node.getAttribute('data-tooltip');
+      if (text) {
+        archTooltip.textContent = text;
+        archTooltip.classList.add('visible');
+      }
+    });
+    node.addEventListener('mousemove', (e) => {
+      const rect = archCanvas.getBoundingClientRect();
+      archTooltip.style.left = (e.clientX - rect.left + 15) + 'px';
+      archTooltip.style.top = (e.clientY - rect.top + 15) + 'px';
+    });
+    node.addEventListener('mouseleave', () => {
+      archTooltip.classList.remove('visible');
+    });
+  });
+}
+
+// PHASE 4: Solution architecture interactive
+const solArchGrid = document.getElementById('solArchGrid');
+if (solArchGrid) {
+  solArchGrid.querySelectorAll('.sol-arch-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const detailId = card.getAttribute('data-detail');
+      solArchGrid.querySelectorAll('.sol-arch-card').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.sol-arch-detail').forEach(d => d.classList.remove('active'));
+      card.classList.add('active');
+      const detail = document.getElementById('solDetail' + detailId.charAt(0).toUpperCase() + detailId.slice(1));
+      if (detail) {
+        detail.classList.add('active');
+        detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+  });
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aditya Vikram Singh",
+  "jobTitle": "Forward Deployed Engineer",
+  "description": "Forward Deployed Engineer specializing in Enterprise AI, Voice AI, Customer Engineering, Solution Architecture, and Enterprise Integrations.",
+  "url": "https://adityavikramsingh.dev",
+  "sameAs": ["https://linkedin.com/in/adityavikramsingh"],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Sprinklr"
+  },
+  "knowsAbout": ["Enterprise AI", "Voice AI", "Solution Architecture", "Customer Engineering", "Conversational AI", "REST APIs", "OAuth", "CTI", "SIP", "VoIP", "FastAPI", "LangGraph", "OpenAI", "RAG"]
+}
+</script>
+
+</body>
+</html>
